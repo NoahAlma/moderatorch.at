@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+     <link rel="shortcut icon" type="image/jpg" href="https://media.influencerupdate.biz/2018/7/90362/twitch-mod-sword-r225x.jpg"/>
+
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>moderatorch.at</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="box" id="box">
+         <div id="messagesComp"></div>
+      </div>
+      <input type="text" id="chatbox" placeholder="Send a message" class="search" onkeydown="search(event)"></input>
+      <div class="control" id="control">
+         <h1>Control panel</h1>
+         <br>
+         <a href="help.html">
+           <button>Help</button>
+         </a>
+         <button id="login" onclick="login()">Join channel</button>
+         <button id="pause" onclick="go()">Pause chat</button>
+      </div>
+      <script src="tmi.min.js"></script>
+      <script src="app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </body>
+</html>
