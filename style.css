@@ -1,28 +1,28 @@
 li {
-  padding: 8px;
+    padding: 8px;
 }
 
 #twitchMessage {
-  list-style: none;
-  padding-left: 0;
-  color: purple;
+    list-style: none;
+    padding-left: 0;
+    color: purple;
 }
 
 li#twitchMessage::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  left: 20px;
-  background-size: cover;
-  background-position: center;
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    background-size: cover;
+    background-position: center;
 }
 
 #messagesComp {
-  width: 70%;
+    width: 70%;
 }
 
 body {
-  background-color: grey;
-  color: black;
+    background-color: grey;
+    color: black;
 }
