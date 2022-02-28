@@ -90,9 +90,11 @@ client.on("message", (channel, tags, message, self) => {
 })
 
 function search(ele) {
-    if (ele.code == "Enter") {
-        client.say(token, document.getElementById("chatbox").value)
-        document.getElementById("chatbox").value = null
+    if (loggedin) {    
+        if (ele.code == "Enter") {
+           client.say(token, document.getElementById("chatbox").value)
+           document.getElementById("chatbox").value = null
+        }
     }
 }
 
