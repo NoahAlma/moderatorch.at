@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/jpg" href="https://media.influencerupdate.biz/2018/7/90362/twitch-mod-sword-r225x.jpg" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moderatorch.at - Help</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="help-content">
+                <h1>Help Center</h1>
+                <div class="help-section">
+                    <h2>Common Issues</h2>
+                    <div class="help-card">
+                        <h3>Login Problems?</h3>
+                        <p>If you're having trouble logging in, you can try resetting your login information:</p>
+                        <button onclick="resetLogin()" class="primary-button">Reset Login Info</button>
+                    </div>
+                    <div class="help-card">
+                        <h3>Need Support?</h3>
+                        <p>If you're still experiencing issues, please email me:</p>
+                        <p><a href="mailto:noah@alma.com">noah@alma.com</a></p>
+                    </div>
+                </div>
+                <button onclick="goBack()" class="secondary-button">← Back</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        function resetLogin() {
+            localStorage.clear();
+            window.location.href = 'http://localhost:3000';
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script src="tmi.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

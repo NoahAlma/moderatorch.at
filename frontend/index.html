@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/jpg" href="https://media.influencerupdate.biz/2018/7/90362/twitch-mod-sword-r225x.jpg" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moderatorch.at</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="main-content">
+            <div class="box" id="box">
+                <div id="messagesComp"></div>
+            </div>
+            <input type="text" id="chatbox" class="chatbox" placeholder="Send a message" onkeydown="search(event)">
+        </div>
+        <div class="control" id="control">
+            <div class="control-buttons">
+                <div id="auth-section">
+                    <button id="login" onclick="login()" class="primary-button">
+                        Login with Twitch
+                    </button>
+                    <div id="welcome" class="welcome-message" style="display: none;">
+                        <h2>Welcome to moderatorch.at!</h2>
+                        <h3>Control Panel</h3>
+                    </div>
+                </div>
+                <div class="channel-input">
+                    <input type="text" id="channelInput" placeholder="Enter channel name" class="channel-box">
+                    <button onclick="applyChannel()" class="secondary-button">Apply</button>
+                </div>
+                <div class="button-row">
+                    <button id="pause" onclick="go()" class="secondary-button">Pause Chat</button>
+                </div>
+                <!-- Button editor section will be here -->
+            </div>
+            <div class="help-footer">
+                <a href="help.html">
+                    <button class="secondary-button">Help</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="tmi.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

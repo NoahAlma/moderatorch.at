@@ -1,0 +1,383 @@
+:root {
+  --twitch-purple: #9146FF;
+  --twitch-dark: #18181B;
+  --text-light: #EFEFF1;
+}
+
+body {
+  background-color: var(--twitch-dark);
+  color: var(--text-light);
+  font-family: 'Inter', -apple-system, sans-serif;
+  margin: 0;
+  padding: 0;
+  cursor: default; /* Reset cursor */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: default; /* Reset cursor */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  cursor: default; /* Reset cursor */
+}
+
+.main-content:hover {
+  cursor: default; /* Remove ns-resize cursor on hover */
+}
+
+.box {
+  background: #1F1F23;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  cursor: default; /* Reset cursor */
+}
+
+#messagesComp {
+  width: 100%;
+}
+
+#twitchMessage {
+  list-style: none;
+  padding: 8px;
+  margin: 4px 0;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.message-content {
+  flex: 1;
+  border-bottom: 1px solid rgba(46, 204, 113, 0.3);
+  padding-bottom: 2px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.message-actions {
+  display: flex;
+  gap: 2px;
+  margin-top: 6px;
+}
+
+.message-actions button {
+  padding: 4px 8px;
+  font-size: 12px;
+  height: 24px;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.control {
+  background: #1F1F23;
+  padding: 20px;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Add scroll for control panel */
+}
+
+.control-buttons {
+  flex: 1;
+  overflow-y: auto; /* Allow scrolling of button content */
+}
+
+button {
+  background: var(--twitch-purple);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  margin: 0 4px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.chatbox {
+  width: 100%;
+  padding: 12px;
+  background: #1F1F23;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  color: white;
+  box-sizing: border-box;
+}
+
+/* Help page specific styles */
+.help-content {
+    background: #1F1F23;
+    border-radius: 8px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.help-section {
+    margin: 30px 0;
+}
+
+.help-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.help-card h3 {
+    color: var(--twitch-purple);
+    margin-top: 0;
+}
+
+.primary-button {
+    background: var(--twitch-purple);
+}
+
+.secondary-button {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.channel-input {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.channel-box {
+    flex: 1;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.channel-box:focus {
+    outline: none;
+    border-color: var(--twitch-purple);
+}
+
+.button-row {
+    display: flex;
+    gap: 8px;
+}
+
+.button-row button {
+    flex: 1;
+}
+
+.help-link {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+}
+
+.help-link button {
+    width: 100%;
+}
+
+.welcome-message {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.welcome-message h2 {
+    margin: 0;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.welcome-message h3 {
+    margin: 10px 0 0 0;
+    font-size: 1.1em;
+    opacity: 0.8;
+}
+
+#auth-section {
+    margin-bottom: 16px;
+}
+
+.alert-box {
+    background-color: #ffcccc;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.alert-border {
+    border: 2px solid #d8000c;
+    animation: shake 0.3s;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+
+.system-message {
+    list-style: none;
+    padding: 12px;
+    margin: 8px 0;
+    background: rgba(216, 0, 12, 0.1);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffcccc;
+}
+
+/* Add styles for timestamps and usernames */
+.timestamp {
+  color: rgba(239, 239, 241, 0.6);  /* More grey version of --text-light */
+}
+
+.username {
+  color: rgba(239, 239, 241, 0.7);  /* Slightly more visible than timestamp */
+}
+
+.autocomplete-box {
+    position: absolute;
+    background: #1F1F23;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 200px;
+    display: none;
+    z-index: 1000;
+}
+
+.autocomplete-item {
+    padding: 8px 12px;
+    cursor: pointer;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.autocomplete-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.chat-emote {
+    vertical-align: middle;
+    margin: 0 2px;
+    height: 28px; /* Standard Twitch emote size */
+}
+
+.message-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.button-editor-section {
+    margin-top: 20px;
+    padding-bottom: 60px; /* Add space for footer */
+}
+
+.button-editor {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.button-edit-row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.button-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.checkmark {
+    color: #2ecc71;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.checkmark.show {
+    opacity: 1;
+}
+
+.button-edit-row input,
+.button-edit-row select {
+    background: #1F1F23;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: var(--text-light);
+    padding: 6px 8px;
+    font-size: 12px;
+}
+
+.button-edit-row input:focus,
+.button-edit-row select:focus {
+    border-color: var(--twitch-purple);
+    outline: none;
+}
+
+.help-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky; /* Keep footer at bottom */
+  bottom: 0;
+  background: #1F1F23; /* Match background */
+}
+
+.help-footer button {
+  width: 100%;
+}
+
+/* Add resize handle styling */
+.main-content:hover {
+  cursor: default; /* Remove ns-resize cursor on hover */
+}
+
+/* Remove any resize handle classes if they exist */
+.resize-handle,
+.resize-handle.active,
+.resize-handle:hover {
+  display: none;
+}
+
