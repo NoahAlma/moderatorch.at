@@ -59,3 +59,8 @@ A simple event chat moderation tool for Twitch streamers and moderators. This ap
 
 ## Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any improvements or features.
+
+## Why 'moderatorch.at'?
+I call it moderatorch.at for two reasons
+   a. The TLD '.at' is Austria, and I am an Austrian citizen
+   b. I used to own the domain but no longer do
